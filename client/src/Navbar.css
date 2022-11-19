@@ -1,0 +1,12 @@
+.navbar {
+    border: 1px solid rgb(215, 207, 207);
+    box-shadow: 7px 10px 20px 4px rgb(202, 202, 202);
+    height: 5%;
+    text-align: center;
+}
+
+.logo {
+    height: 7rem;
+    margin: 0;
+    padding: 0;
+}

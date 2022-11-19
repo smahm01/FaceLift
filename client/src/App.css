@@ -1,0 +1,45 @@
+.App {
+    margin: 0 500px 0 500px;
+    height: 100vh;
+
+}
+
+.instruction-title {
+    font-size:36px;
+    padding: 2px;
+    margin: 2px;
+    padding-top: 30px;
+}
+
+.instruction-description {
+    font-style: italic;
+}
+
+.upload-button {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-top: 30px;
+}
+
+.displayed-image {
+    padding-top: 20px;
+    margin: 0;
+    height: 500px;
+    width: 500px;
+}
+
+.input-button {
+    background-image: linear-gradient(to right, #5C258D 0%, #4389A2  51%, #5C258D  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}

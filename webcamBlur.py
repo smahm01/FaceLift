@@ -99,7 +99,7 @@ while (True) :
         for (x, y, width, height) in eye_found:
             if (len(detected_unknown_face_coordinates) == 0) or ((detected_unknown_face_coordinates[0] < y < detected_unknown_face_coordinates[2]) and (detected_unknown_face_coordinates[1] < x < detected_unknown_face_coordinates[3])):
                 if (len(detected_known_face_coordinates) == 0) or ((detected_known_face_coordinates[0] < y < detected_known_face_coordinates[2]) and (detected_known_face_coordinates[1] < x < detected_known_face_coordinates[3])):
-                    # cv2.rectangle(frame, (x, y), (x + height, y + width), (0, 255, 0), 5)
+                    cv2.rectangle(frame, (x, y), (x + height, y + width), (0, 255, 0), 5)
                     if (y - 2*height) < 0:
                         frame_top = 0
                     else:
@@ -117,7 +117,10 @@ while (True) :
                     else:
                         frame_right =  x + 2*width
                     face_image = frame[frame_top:frame_bottom, frame_left:frame_right]
-                    # face_image = cv2.GaussianBlur(face_image, (99, 99), 30)
+                    try:
+                        face_image = cv2.GaussianBlur(face_image, (99, 99), 30)
+                    except:
+                        print("skipped")
                     frame[frame_top:frame_bottom, frame_left:frame_right] = face_image
 
     cv2.imshow("video", frame)

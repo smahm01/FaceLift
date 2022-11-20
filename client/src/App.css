@@ -1,7 +1,30 @@
 .App {
-    margin: 0 500px 0 500px;
-    height: 100vh;
+    height: 95vh;
+    text-align: center;
+}
 
+.cropImage{
+    border-style: dashed;
+    border-color: #663399;
+    border-width: 3px;
+    border-radius: 10px;
+    width:200px;
+}
+
+.cropImage img:hover{
+    opacity:0.5
+}
+
+.cropImage img:hover input {
+    display: block;
+}
+.cropImage img input {
+    position:absolute;
+    display:none;
+}
+.cropImage img:hover input.delete {
+    top:0;
+    left:79%;
 }
 
 .instruction-title {
@@ -13,12 +36,32 @@
 
 .instruction-description {
     font-style: italic;
+    font-size: 20px;
+}
+
+.instruction-subtitle {
+    font-size: 20px;
+    padding: 2px;
+    margin: 2px;
+    padding-top: 15px;
+
 }
 
 .upload-button {
-    margin: 0 auto;
+    margin: auto;
     margin-top: 10px;
-    margin-top: 30px;
+    background-image: linear-gradient(to right, #5C258D 0%, #4389A2  51%, #5C258D  100%);
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
 }
 
 .displayed-image {
@@ -26,6 +69,7 @@
     margin: 0;
     height: 500px;
     width: 500px;
+    
 }
 
 .input-button {
